@@ -1,0 +1,220 @@
+Équipier1: Prénom Nom
+Équipier2: Prénom Nom
+E1.1 
+a) ------------------------------------------------------------------------
+r1 | pabone | 2014-09-22 13:06:33 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   A /TP1
+   A /TP1/Makefile
+   A /TP1/btimest.cpp
+   A /TP1/btimest.h
+   A /TP1/main.cpp
+   A /TP1/readme.txt
+
+mise en place des fichiers sources initiaux
+------------------------------------------------------------------------
+
+b) svn log: permet de générer un rapport des changements sur les differentes revisions des fichiers sur le serveur SVN ( "-v" permet la verbose)
+
+
+E1.2 
+2-a)
+
+ M       TP1/readme.txt
+[2]+  Fini                    emacs  (wd : ~/Bureau/LOG1000)
+(maintenant, wd : ~/Bureau/LOG1000/log1000-06)
+
+2-b) la Lettre "M" signifie que le fichier en question a été modifié
+4-a) Envoi          main.cpp
+Transmission des données .
+Révision 3 propagée.
+
+
+
+4-b) Non, SVN n'as pas trouvé de situation conflictuelle car les deux fichiers modifiés sont différents
+
+5)
+Copie du log: 
+
+------------------------------------------------------------------------
+r3 | saron | 2014-09-22 13:21:47 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/main.cpp
+
+Modification main.cpp
+------------------------------------------------------------------------
+r2 | pabone | 2014-09-22 13:17:41 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/readme.txt
+
+modification de readme.txt(ajout de ligne)
+------------------------------------------------------------------------
+r1 | pabone | 2014-09-22 13:06:33 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   A /TP1
+   A /TP1/Makefile
+   A /TP1/btimest.cpp
+   A /TP1/btimest.h
+   A /TP1/main.cpp
+   A /TP1/readme.txt
+
+mise en place des fichiers sources initiaux
+------------------------------------------------------------------------
+
+E1.3 
+3-a)  
+G       btimest.cpp
+[1]+  Fini                    gedit
+
+3-b) G signifie que le fichier a été modifié a plusieurs lignes differentes et que svn fera un "merge" des deux differentes modifications au prochain commit de l'equipier 2
+6-a) 
+
+Envoi          TP1/btimest.cpp
+Transmission des données ..
+Révision 11 propagée.
+
+6-b) Non, svn n'as pas trouve de situation conflictuelle car les lignes modifiees ne sont pas les memes, svn et assez inteligent pour faire un merge (fusion)  des deux modifications apportes par l'Equipier 1 et 2.  
+
+6-c) Non, car les fichiers binaires ne sont pas structurés avec des lignes.
+Ainsi il ne peut que conserver les deux copies différentes du fichier plutot que de détecter un conflit dans le fichier.
+
+7.
+
+Copie du log: 
+
+------------------------------------------------------------------------
+r4 | pabone | 2014-09-22 13:38:04 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/btimest.cpp
+
+Ajout d'une fonction et commentaires a la fin de btimest.cpp
+------------------------------------------------------------------------
+r3 | saron | 2014-09-22 13:21:47 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/main.cpp
+
+Modification main.cpp
+------------------------------------------------------------------------
+r2 | pabone | 2014-09-22 13:17:41 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/readme.txt
+
+modification de readme.txt(ajout de ligne)
+------------------------------------------------------------------------
+r1 | pabone | 2014-09-22 13:06:33 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   A /TP1
+   A /TP1/Makefile
+   A /TP1/btimest.cpp
+   A /TP1/btimest.h
+   A /TP1/main.cpp
+   A /TP1/readme.txt
+
+mise en place des fichiers sources initiaux
+------------------------------------------------------------------------
+
+
+
+
+E1.4 
+5-a) 
+
+C    readme.txt
+Actualisé à la révision 5.
+Conflit découvert dans le fichier 'readme.txt'.
+Select: (p) postpone, (df) show diff, (e) edit file, (m) fusion,
+        (mc) my side of conflict, (tc) their side of conflict,
+        (s) show all options: mc
+Conflit sur 'readme.txt' résolu
+Résumé des conflits :
+  Text conflicts: 0 remaining (and 1 already resolved)
+
+5-b) Oui, SVN a trouvé une situation conflictuelle car les deux equipiers modifiait la meme ligne d'un meme fichier
+
+5-c) Si dans le futur un cas comme ceci surviendrait on utiliserait la fonction (df) pour voir la difference entre des deux changements a commit du fichier en question, et pouvoir communiquer entre les equipiers pour choisir la meilleur version, ou faire un merge (un fusion des deux modifications)
+6-a) 
+
+Envoi          btimest.cpp
+Envoi          readme.txt
+Transmission des données ..
+Révision 6 propagée.
+
+6-b) On a pris l'option (mc) "my version of conflict" pour ecraser la modification de l' Équipier 1 et prendre celle de l'Équipier 2 à la place 
+
+7. Copie du log: 
+
+------------------------------------------------------------------------
+r6 | saron | 2014-09-22 14:03:21 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/btimest.cpp
+   M /TP1/readme.txt
+
+post-conflit (mc): ajout de dernière ligne dans readme.txt
+------------------------------------------------------------------------
+r5 | pabone | 2014-09-22 13:53:59 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/readme.txt
+
+ajout d'une ligne a la fin de readme.txt
+------------------------------------------------------------------------
+r4 | pabone | 2014-09-22 13:38:04 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/btimest.cpp
+
+Ajout d'une fonction et commentaires a la fin de btimest.cpp
+------------------------------------------------------------------------
+r3 | saron | 2014-09-22 13:21:47 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/main.cpp
+
+Modification main.cpp
+------------------------------------------------------------------------
+r2 | pabone | 2014-09-22 13:17:41 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   M /TP1/readme.txt
+
+modification de readme.txt(ajout de ligne)
+------------------------------------------------------------------------
+r1 | pabone | 2014-09-22 13:06:33 -0400 (lun 22 sep 2014) | 1 ligne
+Chemins modifiés :
+   A /TP1
+   A /TP1/Makefile
+   A /TP1/btimest.cpp
+   A /TP1/btimest.h
+   A /TP1/main.cpp
+   A /TP1/readme.txt
+
+mise en place des fichiers sources initiaux
+------------------------------------------------------------------------
+
+
+
+E2.1 
+a) 
+
+ctimest:
+	
+	-main.o:
+		-main.cpp
+		-btimest.o
+
+	-btimest.o:
+		-btimest.cpp
+		
+
+
+
+b) 1ere avantage:
+	Si on utilise un Makefile on est pas obligé de retaper toutes les commandes de compilation pour recompiler le programme
+2eme avantage:
+	Utiliser un makefile est une methode de compilation incrementale et hierarchique. C'est a dire que si on modifie un ficher dans la hierarchie et qu'il n'affecte pas une certaine branche de la hierarchie, on ne recompile pas tout le projet, juste la partie affecté par la modification.
+
+E2.2 
+
+Estimated build time: 4 seconds
+
+E2.3 
+Insérez votre sortie l’exécutable ici
+ 
+Estimated build time: 3 seconds
+

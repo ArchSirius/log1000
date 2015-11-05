@@ -1,0 +1,9 @@
+Diagramme de Sequence:
+
+-Maintenance
+
+Dans le cas où une carte employée est présentée à la place d’une carte OPUS d’un client, l’authentificateur isEmploye envoie au créateur d’options appelé Maintenance un message qui indique la présence d’un employé pour vérifier le système (Message: estEmploye).
+Le Createur Maintenance envoie donc un message pour vérifier la santé du système au serveur central de la STM (Message: verifierSante() ). Ce dernier retourne l’information au créateur Maintenance. 
+Ensuite, le créateur Maintenance doit afficher l’information qu’a retourné le serveur central à propos de la santé du système, celui -ce appel donc le notificateur AfficherEtat pour afficher a l’écran l’information sur la santé du système (Message: afficherSante() )
+L’opération est terminée.
+

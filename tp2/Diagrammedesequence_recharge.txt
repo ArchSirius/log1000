@@ -1,0 +1,20 @@
+Diagramme de séquence:
+
+-Recharger crédit
+
+Pour accéder au système, l’utilisateur doit d’abord s’authentifier avec sa carte OPUS. L’authentificateur (Authentificateur: NumeroOpus) récupère le numéro du client grâce au capteur de carte implémenté dans le système.
+Authentificateur: NumeroOpus fait donc parvenir le numéro du client au créateur d’option (Message: numeroClient() ) pour l’utiliser plus tard.
+Ensuite, Createur d’option appele l’option recharge credits (Message: rechargerCredits() ) contenant les informations necessaires du titre sélectionné. 
+Puis, le Montant à payer est envoyé au terminal de paiement pour pouvoir effectuer la transaction par l’usager. (Message: MontantAPayer() ).
+L’usager est donc demandé a ce moment la d’entrer leurs NIP pour s’authentifier envers leur Banque. Après que l’usager a rentré cette information, le terminal de paiement vérifie si l’information est valide (NIP et si le montant demandé est bien disponible dans le compte) en communicant avec l’authentificateur des comptes bancaires, qui est relié respectivement au serveur de la banque correspondante à celle de l’utilisateur (Message: VerifierAuthentifié() ).
+Puis, le Terminal de Paiement renvoie un message à l’option RechargeCredits qui dit si l’information entrée par l’utilisateur est bien valide (Message: isTransactionOk() ).
+
+Deux cas subsidents : (Dépendant de l'état de "isTransactionOK() )
+ 
+	- La Transaction est acceptée (Transaction OK)
+L’option RechargerCredits envoi au serveur une demande d’ajouter les crédits au serveur central de la STM, ce dernier envoi l’information dans les le compte utilisateur correspondant en utilisant le numéro du client communiqué précédemment. (Message: ajouterCredits() ) à partir de ce moment-là, les crédits sont ajoutés dans le compte de l’utilisateur.
+Puis, l’option RechargerCredits doit afficher que la transaction est complétée, ce dernier appelle donc le notificateur qui affiche l’écran que la transaction est réussite (Message :envoyerMessage(succes)).
+L’opération est terminée.
+	- La Transaction est refusée (Transaction refusée)
+L’option RechargerCredits doit afficher que la transaction est refusé, ce dernier appelle donc le notificateur qui affiche l’écran qu’une erreur est survenue (Message :envoyerMessage(succes)).
+L’opération est terminée.

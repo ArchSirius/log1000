@@ -1,0 +1,10 @@
+Diagramme de Sequence:
+
+-Afficher Credit
+
+Pour accéder au système, l’utilisateur doit d’abord s’authentifier avec sa carte OPUS. L’authentificateur (Authentificateur: NumeroOpus) récupère le numéro du client grâce au capteur de carte implémenté dans le système.
+Authentificateur: NumeroOpus fait donc parvenir le numéro du client au créateur d’option (Message: numeroClient() ) pour l’utiliser plus tard.
+Le Créateur d’option fait donc la demande de l’option “Afficher crédit” (Message: afficherCredit() ).
+Ensuite, l’option afficher crédit fait en demander au serveur central de la solder courante de l’utilisateur (en utilisant le numéro du client passé ultérieurement) ce même message est appelé vers la base de données pour récupérer la solde (Message: getSolde() ) 
+puis, dés que la solde est récupérée, l’option AfficherCredit appel le Notificateur: AfficherInfos et lui fait passer la solde de l’utilisateur pour l’afficher directement a l’écran (Message: getSolde() ).
+L’Opération est terminée.

@@ -1,0 +1,15 @@
+
+#Ce Makefile est fonctionel
+
+CC=g++
+EXEC=ctimest_opt
+SRC= $(wildcard *.cpp)
+OBJ= $(SRC:.cpp=.o)
+
+all: $(SRC) $(EXEC)
+
+$(EXEC): $(OBJ)
+	$(CC) $(OBJ) -o $@
+
+clean:
+	rm -rf *.o $(EXEC)

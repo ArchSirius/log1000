@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>Controler.h</itemPath>
+      <itemPath>Data.h</itemPath>
+      <itemPath>SandBox.h</itemPath>
+      <itemPath>SpaceCraft.h</itemPath>
+      <itemPath>SpaceObject.h</itemPath>
+      <itemPath>SpaceObjectFactory.h</itemPath>
+      <itemPath>SpacePlanet.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>Controler.cpp</itemPath>
+      <itemPath>Data.cpp</itemPath>
+      <itemPath>SandBox.cpp</itemPath>
+      <itemPath>SpaceCraft.cpp</itemPath>
+      <itemPath>SpaceObject.cpp</itemPath>
+      <itemPath>SpaceObjectFactory.cpp</itemPath>
+      <itemPath>SpacePlanet.cpp</itemPath>
+      <itemPath>main.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+      <logicalFolder name="f4"
+                     displayName="Test Controler"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/RunTestControler.cpp</itemPath>
+        <itemPath>tests/TestControler.cpp</itemPath>
+        <itemPath>tests/TestControler.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3"
+                     displayName="Test SandBox"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/RunTestSandBox.cpp</itemPath>
+        <itemPath>tests/TestSandBox.cpp</itemPath>
+        <itemPath>tests/TestSandBox.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1"
+                     displayName="Test SpaceObject"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/RunTestSpaceObject.cpp</itemPath>
+        <itemPath>tests/TestSpaceObject.cpp</itemPath>
+        <itemPath>tests/TestSpaceObject.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2"
+                     displayName="Test SpaceObjectFactory"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/RunTestSpaceObjectFactory.cpp</itemPath>
+        <itemPath>tests/TestSpaceObjectFactory.cpp</itemPath>
+        <itemPath>tests/TestSpaceObjectFactory.h</itemPath>
+      </logicalFolder>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <commandLine>-std=c++11</commandLine>
+        </ccTool>
+      </compileType>
+      <item path="Controler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Controler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Data.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SandBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SandBox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpaceCraft.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpaceCraft.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpaceObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpaceObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpaceObjectFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpaceObjectFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpacePlanet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpacePlanet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestControler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestSandBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestSpaceObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestSpaceObjectFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/TestControler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestControler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestSandBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestSandBox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObjectFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObjectFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="Controler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Controler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Data.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Data.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SandBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SandBox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpaceCraft.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpaceCraft.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpaceObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpaceObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpaceObjectFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpaceObjectFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SpacePlanet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="SpacePlanet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f2">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f2</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f3">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <cTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </cTool>
+        <ccTool>
+          <commandLine>`cppunit-config --cflags`</commandLine>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>`cppunit-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestControler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestSandBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestSpaceObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/RunTestSpaceObjectFactory.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="tests/TestControler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestControler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestSandBox.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestSandBox.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObject.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObject.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObjectFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tests/TestSpaceObjectFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

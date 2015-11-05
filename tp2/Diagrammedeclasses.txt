@@ -1,0 +1,27 @@
+E3.1:
+
+Les classes à implémenter dans le système sont les suivantes:
+
+(Dans notre diagramme de classes, toutes les méthodes sont publiques)
+
+Classes:
+
+1 - Options
+	Cette classe inclue deux méthodes: RechargeCredit() et AfficherCredit() qui sont nos deux options d’utilisation du système et utilise les classes: AuthentificateurOpus, CompteUtilisateur et Notificateur.
+
+2 - AuthentificateurOpus
+	Cette class permet d’identifier l’utilisateur, soit l’utilisateur est un client ayant une carte OPUS ou un employé de la STM. Il comporte deux méthodes: GetNumeroClient() (pour connaitre de quel client il s’agit) et isEmployé() qui retourne vrai si l’utilisateur est un employé de la STM et utilise la classe SantéSystem si c’est le cas.
+
+3 - CompteUtilisateur
+	Cette classe comporte les informations d’un client de la STM: son crédit et le numéro de l’utilisateur (qui est le même recupéré par AuthentificateurOpus avec GetNumeroClient). Elle comporte deux méthodes: AjouterCredit() qui permet à l’utilisateur d’ajouter du crédit a son compte et GetCredit qui retourne la valeur du crédit disponible dans le compte.
+
+4 - Notificateur
+	Cette classe permet d’afficher à l’écran des messages pour l’utilisateur du système avec sa méthode afficherMessage().
+
+5 - AuthentificateurBancaire
+	Cette classe est appelée quand l’utilisateur souhaite ajouter du crédit à son compte avec son compte bancaire, elle permet d’effectuer la transaction.
+Ces attributs privés sont: le NIP de l’utilisateur, le numéro bancaire et le montant du compte. Elle comporte deux méthodes: VerfierAuthentifié() qui vérifie si le code NIP est bien correct et VerifierSolde() qui vérifie si l’utilisateur a bien assez de fonds pour effectuer la transaction.
+
+6 - SantéSysteme
+	Cette classe est appelée seulement si l’utilisateur a été identifié comme un employé de la STM. Elle comporte une méthode CommuniquerServeur() qui vérifie la santé du système et modifie son attribut “estFonctionel” qui est vrai si le système est en bonne santé et faux autrement.
+
